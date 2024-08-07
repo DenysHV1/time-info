@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIME</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+	<ul id="categories"><p class="text"></p></ul>
+	</li>
+	</ul>
+	<button class="srt" type="button" data-action="save">Get Time</button>
+	<div class="box">
+		<p class="text-js">Реклама зникне через: <span class="counter"></span></p>
+	</div>
+	<ul class="time">
+		<li class="hours"></li>
+		<li class="element">:</li>
+		<li class="minutes"></li>
+		<li class="element">:</li>
+		<li class="secondes"></li>
+	</ul>
+	<div class="clock">
+		<div class="hand hour" id="hour"></div>
+		<div class="hand minute" id="minute"></div>
+		<div class="hand second" id="second"></div>
+		<div class="markings">
+		<!-- Разметка для минут и секунд -->
+		<div class="marking" style="transform: rotate(0deg);"></div>
+		<div class="marking" style="transform: rotate(6deg);"></div>
+		<div class="marking" style="transform: rotate(12deg);"></div>
+		<!-- Добавьте остальные разметки до 360 градусов -->
+		<div class="marking" style="transform: rotate(354deg);"></div>
+		</div>
+	</div>
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>

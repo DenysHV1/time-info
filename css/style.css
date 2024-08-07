@@ -1,0 +1,110 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.box {
+	display: none;
+	width: 500px;
+	height: 500px;
+	background-color: blue;
+  }
+  
+  .text-js {
+	color: aliceblue;
+	font-size: 20px;
+  }
+  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+  
+  .time {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	padding: 10px;
+	list-style: none;
+  }
+  
+  .hours {
+	padding: 10px;
+	background-color: gold;
+	border-radius: 5px;
+	border: 1px solid black;
+	min-width: 20px;
+  }
+  
+  .minutes {
+	padding: 10px;
+	background-color: rgb(9, 255, 91);
+	border-radius: 5px;
+	border: 1px solid black;
+	min-width: 20px;
+  }
+  
+  .secondes {
+	padding: 10px;
+	background-color: rgb(255, 0, 0);
+	border-radius: 5px;
+	border: 1px solid black;
+	min-width: 20px;
+  }
+  
+  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+  body {
+	  height: 100vh;
+	  background-color: #f0f0f0;
+	  margin: 0;
+	}
+	
+	.clock {
+	  position: relative;
+	  width: 200px;
+	  height: 200px;
+	  border: 10px solid #333;
+	  border-radius: 50%;
+	  background: white;
+	}
+	
+	.hand {
+	  position: absolute;
+	  width: 50%;
+	  height: 6px;
+	  background: #333;
+	  top: 50%;
+	  transform-origin: 100%;
+	  transform: rotate(90deg);
+	  transition: transform 0.5s ease-in-out;
+	}
+	
+	.hour {
+	  height: 8px;
+	  background: #000;
+	}
+	
+	.minute {
+	  height: 6px;
+	  background: #666;
+	}
+	
+	.second {
+	  height: 4px;
+	  background: #f00;
+	}
+	
+	.markings {
+	  position: absolute;
+	  width: 100%;
+	  height: 100%;
+	  top: 0;
+	  left: 0;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	}
+	
+	.marking {
+	  position: absolute;
+	  width: 2px;
+	  height: 10px;
+	  background: #333;
+	  top: 0;
+	  transform-origin: 50% 100%;
+	}
+	
+  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
