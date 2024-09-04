@@ -9,26 +9,6 @@ button.addEventListener("click", () => {
   console.log(monthUkr[date.getMonth()])
     text.textContent = `Місяць: ${monthUkr[date.getMonth()]}, Число: ${date.getDate()}, День неділі: ${dayOfWick[date.getDay()]}`
 });
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
-const box = document.querySelector(".box");
-const counter = document.querySelector(".counter");
-let seconds = 10;
-setTimeout(() => {
-  box.style.display = "block";
-  const interval = setInterval(() => {
-    seconds -= 1;
-    counter.textContent = seconds;
-    if (!seconds) {
-      counter.textContent = "х";
-      counter.addEventListener("click", oneClick);
-      clearInterval(interval);
-    }
-  }, 1000);
-}, 2000);
-
-function oneClick() {
-  box.style.display = "";
-}
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 function updateClock() {
@@ -66,3 +46,25 @@ function updateClock1() {
   setInterval(updateClock1, 1000);
   updateClock1();
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
+const targetDate = new Date ('4/11/2023');
+
+setInterval(() => {
+	const currentDate = new Date();
+	// console.log(convertMs(currentDate - targetDate))
+}, 1000)
+
+
+
+function convertMs(ms){
+	const second = 1000;
+	const minute = second * 60;
+	const hour = minute * 60;
+	const day = hour * 24;
+
+	const days = Math.floor(ms / day);
+	const hours = Math.floor((ms % day) / hour);
+	const minutes = Math.floor(((ms % day) % hour) / minute);
+	const secondes = Math.floor((((ms % day) % hour) % minute) / second);
+
+	return {days, hours, minutes, secondes}
+}
